@@ -10,13 +10,17 @@
  * Return: number of leaves
  */
 
-size_t cnt = 0;
+
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	size_t cnt;
 	size_t left;
 	size_t right;
 	
+	if (tree == NULL)
+	{
+		return (0);
+	}
 	left = binary_tree_leaves(tree->left);
 	right = binary_tree_leaves(tree->right);
 	if ((tree->left == NULL) && (tree->right == NULL))
