@@ -3,7 +3,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_inorder - This function traverses a binary tree in in ordere traversal
+ * binary_tree_inorder - This function traverses a
+ * binary tree in in ordere traversal
  *
  * @tree: The tree to be traversed
  *
