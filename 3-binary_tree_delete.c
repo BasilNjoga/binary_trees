@@ -5,7 +5,7 @@
 /**
  * binary_tree_delete - recursively deletes a binary tree
  *
- * @tree pointer to the tree to be deleted
+ * @tree: pointer to the tree to be deleted
  *
  * Return: Nothing
  */
@@ -16,7 +16,7 @@ void binary_tree_delete(binary_tree_t *tree)
 	{
 		return;
 	}
-	binary_tree_delete( tree->left);
+	binary_tree_delete(tree->left);
 	binary_tree_delete(tree->right);
 	free(tree);
 }
