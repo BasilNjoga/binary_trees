@@ -14,6 +14,10 @@
 
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
 {
+	if (func = NULL)
+	{
+		exit(0);
+	}
 	if (tree == NULL)
 	{
 		return;
