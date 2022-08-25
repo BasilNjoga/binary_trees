@@ -21,24 +21,8 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	{
 		exit(0);
 	}
-
-	while (traverse != NULL)
-	{
-		traverse = traverse->left;
-		func(traverse->n);
-	}
-	traverse = traverse->parent;
-	traverse = traverse->right;
-	func(traverse->n);
-
-	traverse = tree;
-	while (traverse != NULL)
-	{
-		traverse = traverse->left;
-		func(traverse->n);
-	}
-	traverse = traverse->parent;
-	traverse = traverse->right;
-	func(traverse->n);
+	if parent == NULL
+		func(tree);
+	binary_tree_preorder(tree,
 }
 
