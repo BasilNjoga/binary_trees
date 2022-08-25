@@ -3,33 +3,33 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height - this function gives the height of a tree
+ * binary_tree_depth - this function gives the height of a tree
  *
  * @tree: node of the treee to be returned
  *
  * Return: Height of the tree
  */
 
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_depth(const binary_tree_t *tree)
 {
 	size_t left;
 	size_t right;
-	size_t h;
+	size_t d;
 
 	if (tree == NULL)
 	{
 		return (0);
 	}
 	
-	left = binary_tree_height(tree->left);
-	right = binary_tree_height(tree->right);
+	left = binary_tree_depth(tree->left);
+	right = binary_tree_depth(tree->right);
 	if (left > right)
 	{
-		h = 1 + left;
+		d = 1 + left;
 	}
 	else
 	{
-		h = 1 + right;
+		d = 1 + right;
 	}
-	return h;
+	return d;
 }
